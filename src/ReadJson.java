@@ -4,6 +4,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 
 
 // video to load jar
@@ -84,7 +85,7 @@ public class ReadJson {
 
         try {
 
-            String name = (String)jsonObject.get("eye_color");
+            ArrayList name = (ArrayList) jsonObject.get("starships");
 
             org.json.simple.JSONArray msg = (org.json.simple.JSONArray) jsonObject.get("films");
             int n =   msg.size(); //(msg).length();
@@ -93,13 +94,7 @@ public class ReadJson {
                 System.out.println(test);
                 // System.out.println(person.getInt("key"));
             }
-            org.json.simple.JSONArray gsg = (org.json.simple.JSONArray) jsonObject.get("starships");
-            int m =   msg.size(); //(msg).length();
-            for (int i = 0; i < m; ++i) {
-                String pest =(String) gsg.get(i);
-                System.out.println(pest);
-                // System.out.println(person.getInt("key"));
-            }
+
 
             String height= (String)jsonObject.get("height");
             System.out.println(name);
